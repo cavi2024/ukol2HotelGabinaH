@@ -15,7 +15,7 @@ public class Main {
         guestList.add(guest1);
         guestList.add(guest2);
 
-        System.out.println(guestList.get(0).getNameAndSurname() +" " + "(1993-03-13)");
+        System.out.println(guestList.get(0).getNameAndSurname() +" " + "(1993-03-13)"); // tady jsem to obešla, datové formáty se musím doučit
         System.out.println(guestList.get(1).getNameAndSurname() + " " + "(1995-05-05)");
 
         Room room1 = new Room(1, 1, true, true, 1000 );
@@ -37,6 +37,6 @@ public class Main {
         listOfBookings.add(booking1);
         listOfBookings.add(booking2);
 
-        System.out.println(listOfBookings);
+        System.out.println(listOfBookings); //tady zřejmě to také není OK
     }
 }
