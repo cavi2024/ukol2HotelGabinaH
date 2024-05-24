@@ -15,10 +15,10 @@ public class Main {
         guestList.add(guest1);
         guestList.add(guest2);
 
-        System.out.println(guestList.get(0).getNameAndSurname() +" " + "(1993-03-13)"); // tady jsem to obešla, datové formáty se musím doučit
-        System.out.println(guestList.get(1).getNameAndSurname() + " " + "(1995-05-05)");
+        System.out.println(guestList.get(0).getNameAndSurname() +" " + "(" + guest1.getBirthDate() + ")"); // oprava získání správného formátu (datum)
+        System.out.println(guestList.get(1).getNameAndSurname() + " " + "(" + guest2.getBirthDate() + ")");
 
-        Room room1 = new Room(1, 1, true, true, 1000 );
+        Room room1 = new Room(1, 1, true, true, 1000);
         Room room2 = new Room(2, 1, true, true, 1000);
         Room room3 = new Room(3,3, false, true, 2400);
 
