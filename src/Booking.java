@@ -6,11 +6,11 @@ public class Booking {
     private LocalDate firstDay;
     private LocalDate lastDay;
     private Boolean isWorkingTypeOfVacation;
-    private int room;
-    private String guest;
+    private Room room;
+    private Guest guest;
     private List<Guest> otherGuests;
 
-    public Booking(LocalDate firstDay, LocalDate lastDay, Boolean isWorkingTypeOfVacation, int room, String guest, List<Guest> otherGuests) {
+    public Booking(LocalDate firstDay, LocalDate lastDay, Boolean isWorkingTypeOfVacation, Room room, Guest guest, List<Guest> otherGuests) {
         this.firstDay = firstDay;
         this.lastDay = lastDay;
         this.isWorkingTypeOfVacation = isWorkingTypeOfVacation;
@@ -19,7 +19,7 @@ public class Booking {
         this.otherGuests = otherGuests;
     }
 
-    public Booking(LocalDate firstDay, LocalDate lastDay, Boolean isWorkingTypeOfVacation, int room, String guest) {
+    public Booking(LocalDate firstDay, LocalDate lastDay, Boolean isWorkingTypeOfVacation, Room room, Guest guest) {
         this.firstDay = firstDay;
         this.lastDay = lastDay;
         this.isWorkingTypeOfVacation = isWorkingTypeOfVacation;
@@ -51,19 +51,19 @@ public class Booking {
         isWorkingTypeOfVacation = workingTypeOfVacation;
     }
 
-    public int getRoom() {
+    public Room getRoom() {
         return room;
     }
 
-    public void setRoom(int room) {
+    public void setRoom(Room room) {
         this.room = room;
     }
 
-    public String getGuest() {
+    public Guest getGuest() {
         return guest;
     }
 
-    public void setGuest(String guest) {
+    public void setGuest(Guest guest) {
         this.guest = guest;
     }
 
