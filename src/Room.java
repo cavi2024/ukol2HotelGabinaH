@@ -3,9 +3,9 @@ public class Room {
     private int numberOfBeds;
     private boolean isBalcony;
     private boolean isViewOfSea;
-    private double priceOfRoomForNight;
+    private int priceOfRoomForNight;
 
-    public Room(int roomNumber, int numberOfBeds, boolean isBalcony, boolean isViewOfSea, double priceOfRoomForNight) {
+    public Room(int roomNumber, int numberOfBeds, boolean isBalcony, boolean isViewOfSea, int priceOfRoomForNight) {
         this.roomNumber = roomNumber;
         this.numberOfBeds = numberOfBeds;
         this.isBalcony = isBalcony;
@@ -45,11 +45,11 @@ public class Room {
         isViewOfSea = viewOfSea;
     }
 
-    public double getPriceOfRoomForNight() {
+    public int getPriceOfRoomForNight() {
         return priceOfRoomForNight;
     }
 
-    public void setPriceOfRoomForNight(double priceOfRoomForNight) {
+    public void setPriceOfRoomForNight(int priceOfRoomForNight) {
         this.priceOfRoomForNight = priceOfRoomForNight;
     }
 }
