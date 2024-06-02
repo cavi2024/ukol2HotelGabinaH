@@ -74,5 +74,17 @@ public class Booking {
     public void setOtherGuests(List<Guest> otherGuests) {
         this.otherGuests = otherGuests;
     }
+
+    @Override
+    public String toString() {
+        return "Booking{" +
+                "firstDay=" + firstDay +
+                ", lastDay=" + lastDay +
+                ", isWorkingTypeOfVacation=" + isWorkingTypeOfVacation +
+                ", room=" + room +
+                ", guest=" + guest +
+                ", otherGuests=" + otherGuests +
+                '}';
+    }
 }
 
