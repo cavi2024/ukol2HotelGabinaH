@@ -1,17 +1,17 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class BookingManager {
+public class ListBooking {
     private Room room;
     private Guest guest;
     private List<Guest> otherGuests;
-    private List<BookingManager> listOfBookings = new ArrayList<>();
+    private List<ListBooking> listBooking = new ArrayList<>();
 
-    public BookingManager(Room room, Guest guest, List<Guest> otherGuests, List<BookingManager> listOfBookings) {
+    public ListBooking(Room room, Guest guest, List<Guest> otherGuests, List<ListBooking> listOfBookings) {
         this.room = room;
         this.guest = guest;
         this.otherGuests = otherGuests;
-        this.listOfBookings = listOfBookings;
+        this.listBooking = listOfBookings;
     }
 
     public Room getRoom() {
@@ -38,11 +38,11 @@ public class BookingManager {
         this.otherGuests = otherGuests;
     }
 
-    public List<BookingManager> getListOfBookings() {
-        return listOfBookings;
+    public List<ListBooking> getListBooking() {
+        return listBooking;
     }
 
-    public void setListOfBookings(List<BookingManager> listOfBookings) {
-        this.listOfBookings = listOfBookings;
+    public void setListBooking(List<ListBooking> listBooking) {
+        this.listBooking = listBooking;
     }
 }
