@@ -18,6 +18,10 @@ public class BookingManager {
         listBooking.add(newBooking);
     }
 
+    public Booking getBooking(int index) {
+        return listBooking.get(index);
+    }
+
     public Room getRoom() {
         return room;
     }
