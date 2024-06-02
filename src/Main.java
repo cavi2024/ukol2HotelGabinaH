@@ -28,6 +28,6 @@ public class Main {
         listBooking.add(booking1);
         listBooking.add(booking2);
 
-        System.out.println(listBooking);
+        System.out.println(listBooking+"\n");
     }
 }
