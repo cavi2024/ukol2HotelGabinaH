@@ -22,6 +22,13 @@ public class BookingManager {
         return listBooking.get(index);
     }
 
+    public Booking getBookings() {
+        return getBookings();
+    }
+
+    public void clearBookings() {
+    }
+
     public Room getRoom() {
         return room;
     }
