@@ -14,6 +14,10 @@ public class BookingManager {
         this.listBooking = listBooking;
     }
 
+    public void addBooking(Booking newBooking) {
+        listBooking.add(newBooking);
+    }
+
     public Room getRoom() {
         return room;
     }
