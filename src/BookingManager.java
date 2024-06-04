@@ -23,17 +23,13 @@ public class BookingManager {
         return listBooking.get(index); // Získání rezervace se zadaným indexem ze seznamu
     }
 
-    public Booking getBookings() {
-        return getBookings(); // Získání seznamu rezervací - vyměň za getBookinds co má vrátit
+    public List<Booking> getBookings() {
+        return getBookings(); // Získání seznamu rezervací - vyměň za getBookings co má vrátit
     }
 
     public void clearBookings() {
         listBooking.clear();
     }
-
-    // public boolean isWorkingTypeOfVacation () {
-    //     return isWorkingTypeOfVacation();
-    //}
 
     public int getNumberOfWorkingBookings() {
         int numberOfWorkingBookings = 0;
