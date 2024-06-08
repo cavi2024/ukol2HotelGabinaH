@@ -11,7 +11,7 @@ public class Main {
         Guest firstQuest = new Guest("Adéla", "Malíková", LocalDate.of(1993, 3, 13));
         Guest secondQuest = new Guest("Jan", "Dvořáček", LocalDate.of(1995, 5, 5));
 
-        List<Guest> guests = new ArrayList<>();
+        List<Guest> guests = new ArrayList<>(); // Seznam hostů
         guests.add(firstQuest);
         guests.add(secondQuest);
         System.out.println("Seznam hostů:");
@@ -23,7 +23,7 @@ public class Main {
         Room secondRoom = new Room(1, 1, true, true, 1000);
         Room thirdRoom = new Room(3, 3, false, true, 2400);
 
-        List<Room> rooms = new ArrayList<>();
+        List<Room> rooms = new ArrayList<>(); // Seznam pokojů
         rooms.add(firstRoom);
         rooms.add(secondRoom);
         rooms.add(thirdRoom);
