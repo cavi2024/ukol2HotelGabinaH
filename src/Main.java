@@ -19,14 +19,14 @@ public class Main {
             System.out.println(guest.getName() + " " + guest.getSurname() + " "+"(" + guest.getBirthDate() + ")");
         }
 
-        Room firstRoom = new Room(1, 1, true, true, 1000);
-        Room secondRoom = new Room(1, 1, true, true, 1000);
-        Room thirdRoom = new Room(3, 3, false, true, 2400);
+        Room room1 = new Room(1, 1, true, true, 1000);
+        Room room2 = new Room(1, 1, true, true, 1000);
+        Room room3 = new Room(3, 3, false, true, 2400);
 
         List<Room> rooms = new ArrayList<>(); // Seznam pokojů
-        rooms.add(firstRoom);
-        rooms.add(secondRoom);
-        rooms.add(thirdRoom);
+        rooms.add(room1);
+        rooms.add(room2);
+        rooms.add(room3);
         System.out.println("\n" + "Seznam pokojů:");
         for (Room room : rooms) {
             System.out.println("Č.:"+" "+room.getRoomNumber()+" "+"Počet lůžek:"+" "+room.getNumberOfBeds()+
