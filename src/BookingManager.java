@@ -6,34 +6,34 @@ public class BookingManager {
     private Room room;
     private Guest guest;
     private List<Guest> otherGuests;
-    private List<Booking> listBooking = new ArrayList<>();
+    private List<Booking> listBookingManager = new ArrayList<>();
 
-    public BookingManager(Room room, Guest guest, List<Guest> otherGuests, List<Booking> listBooking) {
+    public BookingManager(Room room, Guest guest, List<Guest> otherGuests, List<Booking> listBookingManager) {
         this.room = room;
         this.guest = guest;
         this.otherGuests = otherGuests;
-        this.listBooking.addAll(listBooking);
+        this.listBookingManager.addAll(listBookingManager);
     }
 
     public void addBooking(Booking newBooking) {
-        listBooking.add(newBooking); // Vložení další rezervace do seznamu
+        listBookingManager.add(newBooking); // Vložení další rezervace do seznamu
     }
 
     public Booking getBooking(int index) {
-        return listBooking.get(index); // Získání rezervace se zadaným indexem ze seznamu
+        return listBookingManager.get(index); // Získání rezervace se zadaným indexem ze seznamu
     }
 
     public List<Booking> getBookings() {
-        return getBookings(); // Získání seznamu rezervací - vyměň za getBookings co má vrátit
+        return new ArrayList<>(listBookingManager); // Získání seznamu rezervací -  co má vrátit
     }
 
-    public void clearBookings() {
-        listBooking.clear();
+         public void clearBookings() {
+        listBookingManager.clear();
     }
 
     public int getNumberOfWorkingBookings() {
         int numberOfWorkingBookings = 0;
-        for (Booking booking : listBooking) {
+        for (Booking booking : listBookingManager) {
             if (!booking.getWorkingTypeOfVacation()) {
                 numberOfWorkingBookings++;
             }
@@ -43,14 +43,14 @@ public class BookingManager {
 
     public int getNumberOfGuests() {
         int numberOfGuests = 0;
-        for (Booking booking : listBooking) { // správně?
+        for (Booking booking : listBookingManager) { // správně?
         }
         return numberOfGuests;
     }
 
     public BigDecimal getAverageGuests() {
         BigDecimal averageGuests = BigDecimal.valueOf(0);
-        for (Booking booking : listBooking) { //nutno dopsat spočítání průměru
+        for (Booking booking : listBookingManager) { //nutno dopsat spočítání průměru
         }
         return averageGuests;
     }
@@ -79,11 +79,11 @@ public class BookingManager {
         this.otherGuests = otherGuests;
     }
 
-    public List<Booking> getListBooking() {
-        return new ArrayList<>(listBooking); // kopie seznamu rezervací
+    public List<Booking> getListBookingManager() {
+        return new ArrayList<>(listBookingManager); // kopie seznamu rezervací
     }
 
-    public void setListBooking(List<Booking> listBooking) {
-        this.listBooking = listBooking;
+    public void setListBookingManager(List<Booking> listBookingManager) {
+        this.listBookingManager = listBookingManager;
     }
 }
