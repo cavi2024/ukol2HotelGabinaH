@@ -14,7 +14,7 @@ public class Main {
         List<Guest> guests = new ArrayList<>(); // Seznam hostů
         guests.add(guest1);
         guests.add(guest2);
-        System.out.println("Seznam hostů:");
+            System.out.println("Seznam hostů:");
         for (Guest guest : guests) {
             System.out.println(guest.getName() + " " + guest.getSurname() + " "+"(" + guest.getBirthDate() + ")");
         }
@@ -34,15 +34,16 @@ public class Main {
                     +"\n" + "Cena:"+" "+room.getPriceOfRoomForNight()+" "+"Kč" + "\n");
         }
 
+        // Přidání rezervací:
         Booking booking1 = new Booking(LocalDate.of(2021, 7, 19), LocalDate.of(2021, 7, 26),
                 false, rooms.get(0), guest1);
         Booking booking2 = new Booking(LocalDate.of(2021, 9, 1), LocalDate.of(2021, 9, 1),
-                false, rooms.get(2), guest1); //secondQuest);
+                false, rooms.get(2), guest1, List.of(guest2));
 
-        List<Booking> listBooking = new ArrayList<>();
-        listBooking.add(booking1);
-        listBooking.add(booking2);
+        List<Booking> listBookingManager = new ArrayList<>();
+        listBookingManager.add(booking1);
+        listBookingManager.add(booking2);
 
-        System.out.println(listBooking+"\n");
+        System.out.println(listBookingManager+"\n");
     }
 }
