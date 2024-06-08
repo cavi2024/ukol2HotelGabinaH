@@ -8,12 +8,12 @@ public class Main {
     public static void main(String[] args) {
 
 
-        Guest Quest1 = new Guest("Adéla", "Malíková", LocalDate.of(1993, 3, 13));
-        Guest Quest2 = new Guest("Jan", "Dvořáček", LocalDate.of(1995, 5, 5));
+        Guest guest1 = new Guest("Adéla", "Malíková", LocalDate.of(1993, 3, 13));
+        Guest guest2 = new Guest("Jan", "Dvořáček", LocalDate.of(1995, 5, 5));
 
         List<Guest> guests = new ArrayList<>(); // Seznam hostů
-        guests.add(Quest1);
-        guests.add(Quest2);
+        guests.add(guest1);
+        guests.add(guest2);
         System.out.println("Seznam hostů:");
         for (Guest guest : guests) {
             System.out.println(guest.getName() + " " + guest.getSurname() + " "+"(" + guest.getBirthDate() + ")");
@@ -35,9 +35,9 @@ public class Main {
         }
 
         Booking booking1 = new Booking(LocalDate.of(2021, 7, 19), LocalDate.of(2021, 7, 26),
-                false, rooms.get(0), firstQuest);
+                false, rooms.get(0), guest1);
         Booking booking2 = new Booking(LocalDate.of(2021, 9, 1), LocalDate.of(2021, 9, 1),
-                false, rooms.get(2), firstQuest); //secondQuest);
+                false, rooms.get(2), guest1); //secondQuest);
 
         List<Booking> listBooking = new ArrayList<>();
         listBooking.add(booking1);
