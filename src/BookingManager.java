@@ -43,8 +43,7 @@ public class BookingManager {
     public void setOtherGuests(List<Guest> otherGuests) {
         this.otherGuests = otherGuests;
     }
-    // Metody přidané podle dalších bodů úkolu:
-
+    // Metody přidané z úkolu:
     public List<Booking> getListBookingManager() {
         return new ArrayList<>(listBookingManager); // kopie seznamu rezervací
     }
@@ -85,7 +84,8 @@ public class BookingManager {
 
     public int getNumberOfGuests() {
         int numberOfGuests = 0;
-        for (Booking booking : listBookingManager) { // správně?
+        for (Booking booking : listBookingManager) {
+            int i = numberOfGuests++;
         }
         return numberOfGuests;
     }
