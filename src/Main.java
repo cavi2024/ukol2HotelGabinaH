@@ -7,22 +7,34 @@ public class Main {
 
     public static void main(String[] args) {
 
-        List<Guest> guests = new ArrayList<>();
-        guests.add(new Guest("Adéla", "Malíková", LocalDate.of(1993, 3, 13)));
-        guests.add(new Guest("Jan", "Dvořáček", LocalDate.of(1995, 5, 5)));
 
-        System.out.println(guests.get(0).getName() +" "+ guests.get(0).getSurname() +" "+"(" + guests.get(0).getBirthDate() + ")"); // v jiném formátu zapsáno
-        System.out.println(guests.get(1).getName() +" "+ guests.get(1).getSurname() +" "+"(" + guests.get(1).getBirthDate() + ")");
+        Guest firstQuest = new Guest("Adéla", "Malíková", LocalDate.of(1993, 3, 13));
+        Guest secondQuest = new Guest("Jan", "Dvořáček", LocalDate.of(1995, 5, 5));
+
+        List<Guest> guests = new ArrayList<>();
+        guests.add(firstQuest);
+        guests.add(secondQuest);
+        System.out.println("Seznam hostů:");
+        for (Guest guest : guests) {
+            System.out.println(guest.getName() + " " + guest.getSurname() + " "+"(" + guest.getBirthDate() + ")");
+        }
+
+        Room firstRoom = new Room(1, 1, true, true, 1000);
+        Room secondRoom = new Room(1, 1, true, true, 1000);
+        Room thirdRoom = new Room(3, 3, false, true, 2400);
 
         List<Room> rooms = new ArrayList<>();
-        rooms.add(new Room(1, 1, true, true, 1000));
-        rooms.add(new Room(1, 1, true, true, 1000));
-        rooms.add(new Room(3, 3, false, true, 2400));
+        rooms.add(firstRoom);
+        rooms.add(secondRoom);
+        rooms.add(thirdRoom);
+        for (Room allRooms : rooms) {
+            System.out.println(allRooms.getRoomNumber() + " " + allRooms.getNumberOfBeds() + " " ); //doplnit zbytek
+        }
 
         Booking booking1 = new Booking(LocalDate.of(2021, 7, 19), LocalDate.of(2021, 7, 26),
-                 false, rooms.get(0), guests.get(0));
+                false, rooms.get(0), firstQuest);
         Booking booking2 = new Booking(LocalDate.of(2021, 9, 1), LocalDate.of(2021, 9, 1),
-                false, rooms.get(2), guests.get(1));
+                false, rooms.get(2), firstQuest); //secondQuest);
 
         List<Booking> listBooking = new ArrayList<>();
         listBooking.add(booking1);
