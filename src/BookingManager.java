@@ -64,12 +64,12 @@ public class BookingManager {
         return listBookingManager.get(index); // Získání rezervace se zadaným indexem ze seznamu
     }
 
-    public List<Booking> getBookings() {
-        return new ArrayList<>(listBookingManager); // Získání seznamu rezervací -  co má vrátit
-    }
-
     public void addList(List<Booking> list) {
         listBookingManager.addAll(list);
+    }
+
+    public List<Booking> getBookings() {
+        return new ArrayList<>(listBookingManager); // Získání seznamu rezervací -  co má vrátit
     }
 
     public void clearBookings() {
