@@ -16,6 +16,10 @@ public class BookingManager {
         this.listBookingManager.addAll(listBookingManager);
     }
 
+    public void setBooking(Booking booking) {
+        this.booking = booking;
+    }
+
     public Room getRoom() {
         return room;
     }
@@ -50,10 +54,6 @@ public class BookingManager {
 
     public Booking getBooking() {
         return booking;
-    }
-
-    public void setBooking(Booking booking) {
-        this.booking = booking;
     }
 
     public void addBooking(Booking newBooking) {
