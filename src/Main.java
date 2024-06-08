@@ -40,6 +40,7 @@ public class Main {
         Booking booking2 = new Booking(LocalDate.of(2021, 9, 1), LocalDate.of(2021, 9, 1),
                 false, rooms.get(2), List.of(guest1), List.of(guest2));
 
+        // Seznam rezervací:
         List<Booking> listBookingManager = new ArrayList<>();
         listBookingManager.add(booking1);
         listBookingManager.add(booking2);
