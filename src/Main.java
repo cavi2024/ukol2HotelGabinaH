@@ -27,8 +27,11 @@ public class Main {
         rooms.add(firstRoom);
         rooms.add(secondRoom);
         rooms.add(thirdRoom);
-        for (Room allRooms : rooms) {
-            System.out.println(allRooms.getRoomNumber() + " " + allRooms.getNumberOfBeds() + " " ); //doplnit zbytek
+        System.out.println("\n" + "Seznam pokojů:");
+        for (Room room : rooms) {
+            System.out.println("Č.:"+" "+room.getRoomNumber()+" "+"Počet lůžek:"+" "+room.getNumberOfBeds()+
+                    " "+"Balkón:"+" "+room.isBalcony()+" "+"S výhledem na moře:"+" "+room.isViewOfSea()+" "
+                    +"\n" + "Cena:"+" "+room.getPriceOfRoomForNight()+" "+"Kč" + "\n");
         }
 
         Booking booking1 = new Booking(LocalDate.of(2021, 7, 19), LocalDate.of(2021, 7, 26),
