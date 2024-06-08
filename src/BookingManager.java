@@ -68,6 +68,10 @@ public class BookingManager {
         return new ArrayList<>(listBookingManager); // Získání seznamu rezervací -  co má vrátit
     }
 
+    public void addList(List<Booking> list) {
+        listBookingManager.addAll(list);
+    }
+
     public void clearBookings() {
         listBookingManager.clear();
     }
