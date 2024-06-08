@@ -43,7 +43,10 @@ public class Main {
         List<Booking> listBookingManager = new ArrayList<>();
         listBookingManager.add(booking1);
         listBookingManager.add(booking2);
-
-        System.out.println(listBookingManager+"\n");
+        System.out.println("\n" + "Seznam rezervací:");
+        for (Booking ignored : listBookingManager) {
+            System.out.println(listBookingManager+"\n");
+            System.out.println("Příjezd:"+" "); // dopsat
+        }
     }
 }
