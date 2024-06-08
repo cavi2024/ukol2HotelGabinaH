@@ -86,14 +86,6 @@ public class BookingManager {
         return numberOfWorkingBookings;
     }
 
-    public int getNumberOfGuests() {
-        int numberOfGuests = 0;
-        for (Booking booking : listBookingManager) {
-            int i = numberOfGuests++;
-        }
-        return numberOfGuests;
-    }
-
     public BigDecimal getAverageGuests() {
         BigDecimal averageGuests = BigDecimal.valueOf(0);
         for (Booking booking : listBookingManager) { //nutno dopsat spočítání průměru
