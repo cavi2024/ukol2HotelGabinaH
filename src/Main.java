@@ -36,9 +36,9 @@ public class Main {
 
         // Přidání rezervací:
         Booking booking1 = new Booking(LocalDate.of(2021, 7, 19), LocalDate.of(2021, 7, 26),
-                false, rooms.get(0), guest1);
+                false, rooms.get(0), List.of(guest1));
         Booking booking2 = new Booking(LocalDate.of(2021, 9, 1), LocalDate.of(2021, 9, 1),
-                false, rooms.get(2), guest1, List.of(guest2));
+                false, rooms.get(2), List.of(guest1), List.of(guest2));
 
         List<Booking> listBookingManager = new ArrayList<>();
         listBookingManager.add(booking1);
