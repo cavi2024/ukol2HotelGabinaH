@@ -7,12 +7,17 @@ public class BookingManager {
     private Guest guest;
     private List<Guest> otherGuests;
     private List<Booking> listBookingManager = new ArrayList<>();
+    private Booking booking;
 
     public BookingManager(Room room, Guest guest, List<Guest> otherGuests, List<Booking> listBookingManager) {
         this.room = room;
         this.guest = guest;
         this.otherGuests = otherGuests;
         this.listBookingManager.addAll(listBookingManager);
+    }
+
+    public BookingManager(Booking booking) {
+        this.booking = booking;
     }
 
     public void addBooking(Booking newBooking) {
@@ -85,5 +90,13 @@ public class BookingManager {
 
     public void setListBookingManager(List<Booking> listBookingManager) {
         this.listBookingManager = listBookingManager;
+    }
+
+    public Booking getBooking() {
+        return booking;
+    }
+
+    public void setBooking(Booking booking) {
+        this.booking = booking;
     }
 }
