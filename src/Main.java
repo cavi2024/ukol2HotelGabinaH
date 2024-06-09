@@ -20,7 +20,7 @@ public class Main {
         }
 
         Room room1 = new Room(1, 1, true, true, 1000);
-        Room room2 = new Room(1, 1, true, true, 1000);
+        Room room2 = new Room(2, 1, true, true, 1000);
         Room room3 = new Room(3, 3, false, true, 2400);
 
         List<Room> rooms = new ArrayList<>(); // Seznam pokojů
@@ -55,5 +55,7 @@ public class Main {
         Guest guest3 = new Guest("Karel", "Dvořák", LocalDate.of(1990, 5, 15));
         Guest guest4 = new Guest("Karel", "Dvořák", LocalDate.of(1979, 1, 3));
         Guest guest5 = new Guest("Karolína", "Tmavá", LocalDate.of(1992, 7, 7));
+
+
     }
 }
