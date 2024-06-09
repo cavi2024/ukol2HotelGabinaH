@@ -60,9 +60,16 @@ public class Main {
         Room room2 = new Room(2, 1, true, true, 1000);
         Room room3 = new Room(3, 3, false, true, 2400);
 
-        bookingManager.addBooking (new Booking(LocalDate.of(2023,6,1), LocalDate.of(2023, 6, 7),
+        bookingManager.addBooking(new Booking(LocalDate.of(2023,6,1), LocalDate.of(2023, 6, 7),
                 true, room3, List.of(guest3)));
-        bookingManager.addBooking (new Booking(LocalDate.of(2023,7,18), LocalDate.of(2023, 7, 21),
+        bookingManager.addBooking(new Booking(LocalDate.of(2023,7,18), LocalDate.of(2023, 7, 21),
                 false, room2, List.of(guest4)));
+
+        // Přidání dvoudenních rezervací pro Karolínu Tmavou:
+        for (int i = 1; i <= 10; i++) {
+            LocalDate firstDay = LocalDate.of(2023, 8, i * 2 - 1);
+            LocalDate lastDay = firstDay.plusDays(1);
+            bookingManager.addBooking(new Booking(firstDay, lastDay, false, room2, List.of(guest5)));
+        }
     }
 }
