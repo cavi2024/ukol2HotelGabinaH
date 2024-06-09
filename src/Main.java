@@ -70,5 +70,8 @@ public class Main {
             LocalDate lastDay = firstDay.plusDays(1);
             bookingManager.addBooking(new Booking(firstDay, lastDay, false, room2, List.of(guest5)));
         }
+
+        bookingManager.addBooking(new Booking(LocalDate.of(2023, 8, 1), LocalDate.of(2023, 8, 31),
+                false, room3, List.of(guest5)));
     }
 }
