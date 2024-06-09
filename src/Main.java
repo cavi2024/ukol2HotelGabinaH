@@ -74,4 +74,9 @@ public class Main {
         bookingManager.addBooking(new Booking(LocalDate.of(2023, 8, 1), LocalDate.of(2023, 8, 31),
                 false, room3, List.of(guest5)));
     }
+
+    private static void printBookings(List<Booking> listBookingManager) {
+        for (Booking ignored : listBookingManager);
+        System.out.println(listBookingManager);
+    }
 }
