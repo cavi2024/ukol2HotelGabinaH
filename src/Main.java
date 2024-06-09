@@ -60,9 +60,9 @@ public class Main {
         Room room2 = new Room(2, 1, true, true, 1000);
         Room room3 = new Room(3, 3, false, true, 2400);
 
-        List<Room> rooms = new ArrayList<>(); // Seznam pokojů
-        rooms.add(room1);
-        rooms.add(room2);
-        rooms.add(room3);
+        bookingManager.addBooking (new Booking(LocalDate.of(2023,6,1), LocalDate.of(2023, 6, 7),
+                true, room3, List.of(guest3)));
+        bookingManager.addBooking (new Booking(LocalDate.of(2023,7,18), LocalDate.of(2023, 7, 21),
+                false, room2, List.of(guest4)));
     }
 }
