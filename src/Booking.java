@@ -75,7 +75,7 @@ public class Booking {
         this.otherGuests = otherGuests;
     }
 
-    public int getNumberOfGuests() {
+    public int getNumberOfGuests() { // Počet hostů
         return guests.size();
     }
 
