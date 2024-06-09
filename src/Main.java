@@ -80,4 +80,15 @@ public class Main {
         System.out.println(listBookingManager);
         }
     }
+
+    private static void printFirstXRecreationalBookings(List<Booking> listBookingManager, int x) {
+        int count = 0;
+        for (Booking booking : listBookingManager) {
+            if (!booking.getWorkingTypeOfVacation()) {
+                System.out.println(listBookingManager);
+                count++;
+                if (count >= x) break;
+            }
+        }
+    }
 }
