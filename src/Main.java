@@ -76,7 +76,8 @@ public class Main {
     }
 
     private static void printBookings(List<Booking> listBookingManager) {
-        for (Booking ignored : listBookingManager);
+        for (Booking ignored : listBookingManager) {
         System.out.println(listBookingManager);
+        }
     }
 }
