@@ -50,4 +50,10 @@ public class Main {
             System.out.println("Příjezd:"+" "); // dopsat
         }
     }
+
+    public static void fillBookings (BookingManager bookingManager) {
+        Guest guest3 = new Guest("Karel", "Dvořák", LocalDate.of(1990, 5, 15));
+        Guest guest4 = new Guest("Karel", "Dvořák", LocalDate.of(1979, 1, 3));
+        Guest guest5 = new Guest("Karolína", "Tmavá", LocalDate.of(1992, 7, 7));
+    }
 }
