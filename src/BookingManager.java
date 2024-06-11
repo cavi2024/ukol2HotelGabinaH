@@ -88,8 +88,11 @@ public class BookingManager {
 
     public BigDecimal getAverageGuests() {
         BigDecimal averageGuests = BigDecimal.valueOf(0);
-        for (Booking booking : listBookingManager) { //nutno dopsat spočítání průměru
+        BigDecimal sumOfGet = BigDecimal.valueOf(0);
+        for (Booking booking : listBookingManager) {
+            sumOfGet = sumOfGet.add(BigDecimal.valueOf(booking.getNumberOfGuests()));
         }
+        averageGuests = sumOfGet.divide(BigDecimal.valueOf(listBookingManager.size()));
         return averageGuests;
     }
 }
