@@ -75,6 +75,7 @@ public class BookingManager {
     public void clearBookings() {
         listBookingManager.clear();
     }
+    // Počet pracovních rezervací:
 
     public int getNumberOfWorkingBookings() {
         int numberOfWorkingBookings = 0;
@@ -85,6 +86,7 @@ public class BookingManager {
         }
         return numberOfWorkingBookings;
     }
+    // Spočítání průměrného počtu hostů na rezervaci:
 
     public BigDecimal getAverageGuests() {
         BigDecimal averageGuests = BigDecimal.valueOf(0);
