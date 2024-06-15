@@ -98,4 +98,12 @@ public class Main {
             }
         }
     }
+
+    // metoda statistiky hostů, která vypíše celkový počet rezervací s jedním, dvěma a více hosty:
+    private static void printGuestStatistics () {
+        int numberOfBookingWithOneGuest = 0;
+        for (Booking booking : listBookingManager() == 1) {
+            numberOfBookingWithOneGuest = numberOfBookingWithOneGuest +1;
+        }
+    }
 }
