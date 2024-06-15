@@ -45,12 +45,17 @@ public class Main {
         listBookingManager.add(booking1);
         listBookingManager.add(booking2);
         System.out.println("\n" + "Seznam rezervací:");
-        for (Booking ignored : listBookingManager) {
+        for (Booking booking : listBookingManager) {
             System.out.println(listBookingManager+"\n");
             System.out.println("Příjezd:"+" "); // dopsat
         }
-    }
 
+        BookingManager bookingManager = new BookingManager();
+
+        printFirstXRecreationalBookings(bookingManager.getBookings(), 8);
+        printBookings(bookingManager.getBookings());
+    }
+    // Přidání dalších hostů a rezervací:
     public static void fillBookings (BookingManager bookingManager) {
         Guest guest3 = new Guest("Karel", "Dvořák", LocalDate.of(1990, 5, 15));
         Guest guest4 = new Guest("Karel", "Dvořák", LocalDate.of(1979, 1, 3));
@@ -75,9 +80,10 @@ public class Main {
                 false, room3, List.of(guest5)));
     }
 
+    // podúkol 11. - přepsat, co se má vypsat:
     private static void printBookings(List<Booking> listBookingManager) {
-        for (Booking ignored : listBookingManager) {
-        System.out.println(listBookingManager);
+        for (Booking booking : listBookingManager) {
+                System.out.println(listBookingManager);
         }
     }
 
