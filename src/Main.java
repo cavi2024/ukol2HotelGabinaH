@@ -51,6 +51,7 @@ public class Main {
         }
 
         BookingManager bookingManager = new BookingManager();
+        fillBookings(bookingManager);
 
         printFirstXRecreationalBookings(bookingManager.getBookings(), 8);
         printBookings(bookingManager.getBookings());
