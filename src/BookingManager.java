@@ -90,11 +90,11 @@ public class BookingManager {
 
     public BigDecimal getAverageGuests() {
         BigDecimal averageGuests = BigDecimal.valueOf(0);
-        BigDecimal sumOfGet = BigDecimal.valueOf(0);
+        BigDecimal sumOfGuests = BigDecimal.valueOf(0);
         for (Booking booking : listBookingManager) {
-            sumOfGet = sumOfGet.add(BigDecimal.valueOf(booking.getNumberOfGuests()));
+            sumOfGuests = sumOfGuests.add(BigDecimal.valueOf(booking.getNumberOfGuests()));
         }
-        averageGuests = sumOfGet.divide(BigDecimal.valueOf(listBookingManager.size()));
+        averageGuests = sumOfGuests.divide(BigDecimal.valueOf(listBookingManager.size()));
         return averageGuests;
     }
 }
