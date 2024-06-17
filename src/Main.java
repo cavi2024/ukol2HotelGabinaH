@@ -46,8 +46,10 @@ public class Main {
         listBookingManager.add(booking2);
         System.out.println("\n" + "Seznam rezervací:");
         for (Booking booking : listBookingManager) {
-            System.out.println(listBookingManager+"\n");
-            System.out.println("Příjezd:"+" "); // dopsat
+            System.out.println("Příjezd: "+ booking.getFirstDay() + "," +
+                    " Odjezd: " + booking.getLastDay() + "," +
+                    " Pokoj č.: " + booking.getRoom().getRoomNumber() + "," +
+                    " Počet hostů: " + booking.getNumberOfGuests() + "\n");
         }
 
         BookingManager bookingManager = new BookingManager();
