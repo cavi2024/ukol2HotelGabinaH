@@ -94,8 +94,8 @@ public class Main {
         for (Booking booking : bookings) {
             String fromDate = booking.getFirstDay().format(formatter);
             String toDate = booking.getLastDay().format(formatter);
-            String mainGuestName = booking.getGuests().get(0).getName() + " " + booking.getGuests().get(0).getSurname();
-            String birthDate = booking.getGuests().get(0).getBirthDate().format(formatter);
+            String mainGuestName = booking.getGuests().getFirst().getName() + " " + booking.getGuests().getFirst().getSurname();
+            String birthDate = booking.getGuests().getFirst().getBirthDate().format(formatter);
             int numberOfGuests = booking.getGuests().size();
             String viewOfSea = booking.getRoom().isViewOfSea() ? "ano" : "ne";
             BigDecimal price = booking.getPrice();
