@@ -85,9 +85,10 @@ public class Booking {
         return (int) java.time.temporal.ChronoUnit.DAYS.between(firstDay, lastDay);
     }
 
-
-    public BigDecimal getPrice() {
-        return null;
+    // Metoda vracející cenu podle počtu nocí pro danou rezervaci:
+    public int getPrice() {
+        int length = getBookingLength();
+        return room.getPriceOfRoomForNight()*getBookingLength();
     }
 
     @Override
