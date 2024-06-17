@@ -1,3 +1,4 @@
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -89,6 +90,10 @@ public class Booking {
                 ", guest=" + guests +
                 ", otherGuests=" + otherGuests +
                 '}';
+    }
+
+    public BigDecimal getPrice() {
+        return null;
     }
 }
 
