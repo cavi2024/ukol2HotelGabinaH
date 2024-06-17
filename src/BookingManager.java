@@ -96,7 +96,9 @@ public class BookingManager {
         for (Booking booking : listBookingManager) {
             sumOfGuests = sumOfGuests.add(BigDecimal.valueOf(booking.getNumberOfGuests()));
         }
-        averageGuests = sumOfGuests.divide(BigDecimal.valueOf(listBookingManager.size()));
+        if (listBookingManager.size() > 0) {
+            averageGuests = sumOfGuests.divide(BigDecimal.valueOf(listBookingManager.size()));
+        }
         return averageGuests;
     }
 }
