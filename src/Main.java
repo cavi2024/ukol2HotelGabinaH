@@ -57,6 +57,9 @@ public class Main {
 
         printFirstXRecreationalBookings(bookingManager.getBookings(), 8);
         printBookings(bookingManager.getBookings());
+
+        printGuestStatistics(bookingManager);
+
     }
     // Přidání dalších hostů a rezervací:
     public static void fillBookings (BookingManager bookingManager) {
