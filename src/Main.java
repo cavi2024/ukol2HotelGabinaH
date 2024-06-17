@@ -70,6 +70,9 @@ public class Main {
 
         System.out.println("\nCelkový počet rezervací je: " + bookingManager.getBookings().size());
 
+        System.out.println("Počet pracovních pobytů: " + bookingManager.getNumberOfWorkingBookings());
+        System.out.println("Průměrný počet hostů na rezervaci: " + bookingManager.getAverageGuests());
+
     }
     // Přidání dalších hostů a rezervací:
     public static void fillBookings (BookingManager bookingManager) {
