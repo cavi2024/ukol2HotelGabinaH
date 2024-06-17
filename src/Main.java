@@ -58,9 +58,17 @@ public class Main {
         BookingManager bookingManager = new BookingManager();
         fillBookings(bookingManager);
 
-        printBookings(bookingManager.getBookings());
+        System.out.println("\nPrvních 8 rekreačních rezervací:");
+        printFirst8RecreationalBookings(bookingManager.getBookings());
 
+        System.out.println("\nStatistika hostů:");
         printGuestStatistics(bookingManager);
+
+        System.out.println("\nPrvní rezervace:");
+        System.out.println("Délka první rezervace: " + booking1.getBookingLength() + " nocí");
+        System.out.println("Cena první rezervace: " + booking1.getPrice() + " Kč");
+
+        System.out.println("\nCelkový počet rezervací je: " + bookingManager.getBookings().size());
 
     }
     // Přidání dalších hostů a rezervací:
@@ -98,10 +106,10 @@ public class Main {
             String birthDate = booking.getGuests().getFirst().getBirthDate().format(formatter);
             int numberOfGuests = booking.getGuests().size();
             String viewOfSea = booking.getRoom().isViewOfSea() ? "ano" : "ne";
-            BigDecimal price = booking.getPrice();
+            int price = booking.getPrice();
 
-
-            System.out.println(fromDate + " až " + toDate + ": " + mainGuestName + " (" + birthDate + ") [" + numberOfGuests + ", výhledNaMoře " + viewOfSea + "] za " + price + " Kč");
+            System.out.println(fromDate + " až " + toDate + ": " + mainGuestName + " (" + birthDate + ") [" + numberOfGuests + ", " +
+                    "výhledNaMoře " + viewOfSea + "] za " + price + " Kč");
         }
     }
 
@@ -117,9 +125,10 @@ public class Main {
                 String birthDate = booking.getGuests().getFirst().getBirthDate().format(formatter);
                 int numberOfGuests = booking.getGuests().size();
                 String viewOfSea = booking.getRoom().isViewOfSea() ? "ano" : "ne";
-                BigDecimal price = booking.getPrice();
+                int price = booking.getPrice();
 
-                System.out.println(fromDate + " až " + toDate + ": " + mainGuestName + " (" + birthDate + ") [" + numberOfGuests + ", výhledNaMoře " + viewOfSea + "] za " + price + " Kč");
+                System.out.println(fromDate + " až " + toDate + ": " + mainGuestName + " (" + birthDate + ") [" + numberOfGuests + "," +
+                        " výhledNaMoře " + viewOfSea + "] za " + price + " Kč");
 
                 count++;
                 if (count >= 8) {
