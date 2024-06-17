@@ -58,7 +58,6 @@ public class Main {
         BookingManager bookingManager = new BookingManager();
         fillBookings(bookingManager);
 
-        printFirstXRecreationalBookings(bookingManager.getBookings(), 8);
         printBookings(bookingManager.getBookings());
 
         printGuestStatistics(bookingManager);
@@ -106,14 +105,24 @@ public class Main {
         }
     }
 
-    // Výpis prvních x rezervací:
-    private static void printFirstXRecreationalBookings(List<Booking> bookings, int x) {
+    // Výpis prvních 8 rezervací do formátu: datumOd až datumDo: jméno hlavního hosta (datum narození)[počet hostů, výhledNaMoře ano/ne] za cena
+    public static void printFirst8RecreationalBookings(List<Booking> bookings) {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
         int count = 0;
         for (Booking booking : bookings) {
             if (!booking.getWorkingTypeOfVacation()) {
-                System.out.println(booking);
+                String fromDate = booking.getFirstDay().format(formatter);
+                String toDate = booking.getLastDay().format(formatter);
+                String mainGuestName = booking.getGuests().getFirst().getName() + " " + booking.getGuests().getFirst().getSurname();
+                String birthDate = booking.getGuests().getFirst().getBirthDate().format(formatter);
+                int numberOfGuests = booking.getGuests().size();
+                String viewOfSea = booking.getRoom().isViewOfSea() ? "ano" : "ne";
+                BigDecimal price = booking.getPrice();
+
+                System.out.println(fromDate + " až " + toDate + ": " + mainGuestName + " (" + birthDate + ") [" + numberOfGuests + ", výhledNaMoře " + viewOfSea + "] za " + price + " Kč");
+
                 count++;
-                if (count >= x) {
+                if (count >= 8) {
                     break;
                 }
             }
