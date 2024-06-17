@@ -87,20 +87,22 @@ public class Main {
     }
 
     // Výpis všech rezervací:
-    private static void printBookings(List<Booking> listBookingManager) {
-        for (Booking booking : listBookingManager) {
-                System.out.println(listBookingManager);
+    private static void printBookings(List<Booking> bookings) {
+        for (Booking booking : bookings) {
+                System.out.println(booking);
         }
     }
 
     // Výpis prvních x rezervací:
-    private static void printFirstXRecreationalBookings(List<Booking> listBookingManager, int x) {
+    private static void printFirstXRecreationalBookings(List<Booking> bookings, int x) {
         int count = 0;
-        for (Booking booking : listBookingManager) {
+        for (Booking booking : bookings) {
             if (!booking.getWorkingTypeOfVacation()) {
-                System.out.println(listBookingManager);
+                System.out.println(booking);
                 count++;
-                if (count >= x) break;
+                if (count >= x) {
+                    break;
+                }
             }
         }
     }
