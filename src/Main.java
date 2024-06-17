@@ -1,7 +1,10 @@
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Formatter;
 import java.util.List;
+import java.time.format.DateTimeFormatter;
 
 public class Main {
 
@@ -86,10 +89,20 @@ public class Main {
                 false, room3, List.of(guest5)));
     }
 
-    // Výpis všech rezervací:
+    // Výpis všech rezervací ve formátu: datumOd až datumDo: jméno hlavního hosta (datum narození)[počet hostů, výhledNaMoře ano/ne] za cena
     private static void printBookings(List<Booking> bookings) {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
         for (Booking booking : bookings) {
-                System.out.println(booking);
+            String fromDate = booking.getFirstDay().format(formatter);
+            String toDate = booking.getLastDay().format(formatter);
+            String mainGuestName = booking.getGuests().get(0).getName() + " " + booking.getGuests().get(0).getSurname();
+            String birthDate = booking.getGuests().get(0).getBirthDate().format(formatter);
+            int numberOfGuests = booking.getGuests().size();
+            String viewOfSea = booking.getRoom().isViewOfSea() ? "ano" : "ne";
+            BigDecimal price = booking.getPrice();
+
+
+            System.out.println(fromDate + " až " + toDate + ": " + mainGuestName + " (" + birthDate + ") [" + numberOfGuests + ", výhledNaMoře " + viewOfSea + "] za " + price + " Kč");
         }
     }
 
