@@ -86,13 +86,14 @@ public class Main {
                 false, room3, List.of(guest5)));
     }
 
-    // podúkol 11. výpis všech rezervací - přepsat, co se má vypsat:
+    // Výpis všech rezervací:
     private static void printBookings(List<Booking> listBookingManager) {
         for (Booking booking : listBookingManager) {
                 System.out.println(listBookingManager);
         }
     }
 
+    // Výpis prvních x rezervací:
     private static void printFirstXRecreationalBookings(List<Booking> listBookingManager, int x) {
         int count = 0;
         for (Booking booking : listBookingManager) {
