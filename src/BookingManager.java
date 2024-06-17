@@ -16,6 +16,8 @@ public class BookingManager {
         this.listBookingManager.addAll(listBookingManager);
     }
 
+    public BookingManager() {}
+
     public void setBooking(Booking booking) {
         this.booking = booking;
     }
