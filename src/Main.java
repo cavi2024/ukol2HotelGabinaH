@@ -108,26 +108,24 @@ public class Main {
     }
 
     // metoda statistiky hostů, která vypíše celkový počet rezervací s jedním, dvěma a více hosty:
-    private static void printGuestStatistics () {
-        int numberOfBookingWithOneGuest = 0;
-        for (Booking booking : listBookingManager) {
-            if (booking.getNumberOfGuests() == 1) {
-            numberOfBookingWithOneGuest = numberOfBookingWithOneGuest +1;
+    private static void printGuestStatistics (BookingManager bookingManager) {
+        int oneGuest = 0;
+        int twoGuests = 0;
+        int moreThanTwoGuests = 0;
+
+        for (Booking booking : bookingManager.getBookings()) {
+            int guestCount = booking.getNumberOfGuests();
+            if (guestCount == 1) {
+                oneGuest++;
+            } else if (guestCount == 2) {
+                twoGuests++;
+            } else {
+                moreThanTwoGuests++;
             }
         }
 
-        int numberOfBookingWithTwoGuest = 0;
-        for (Booking booking : listBookingManager) {
-            if(booking.getNumberOfGuests() == 2) {
-            numberOfBookingWithTwoGuest = numberOfBookingWithTwoGuest +1;
-            }
-        }
-
-        int numberOfBookingWithThreeAndMoreGuest = 0;
-        for (Booking booking : listBookingManager) {
-            if(booking.getNumberOfGuests() == 2) {
-                numberOfBookingWithThreeAndMoreGuest = numberOfBookingWithThreeAndMoreGuest +1;
-            }
-        }
+        System.out.println("Celkový počet rezervací s jedním hostem: " + oneGuest);
+        System.out.println("Celkový počet rezervací se dvěma hosty: " + twoGuests);
+        System.out.println("Celkový počet rezervací s více než dvěma hosty: " + moreThanTwoGuests);
     }
 }
