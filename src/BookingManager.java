@@ -3,48 +3,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BookingManager {
-    private Room room;
-    private Guest guest;
-    private List<Guest> otherGuests;
-    private List<Booking> listBookingManager = new ArrayList<>();
-    private Booking booking;
 
-    public BookingManager(Room room, Guest guest, List<Guest> otherGuests, List<Booking> listBookingManager) {
-        this.room = room;
-        this.guest = guest;
-        this.otherGuests = otherGuests;
+    private List<Booking> listBookingManager = new ArrayList<>();
+
+
+    public BookingManager(List<Booking> listBookingManager) {
         this.listBookingManager.addAll(listBookingManager);
     }
 
     public BookingManager() {}
 
-    public void setBooking(Booking booking) {
-        this.booking = booking;
-    }
 
-    public Room getRoom() {
-        return room;
-    }
-
-    public void setRoom(Room room) {
-        this.room = room;
-    }
-
-    public Guest getGuest() {
-        return guest;
-    }
-
-    public void setGuest(Guest guest) {
-        this.guest = guest;
-    }
-
-    public List<Guest> getOtherGuests() {
-        return otherGuests;
-    }
-
-    public void setOtherGuests(List<Guest> otherGuests) {
-        this.otherGuests = otherGuests;
-    }
     // Metody přidané z úkolu:
     public List<Booking> getListBookingManager() {
         return new ArrayList<>(listBookingManager); // kopie seznamu rezervací
@@ -52,10 +21,6 @@ public class BookingManager {
 
     public void setListBookingManager(List<Booking> listBookingManager) {
         this.listBookingManager = listBookingManager;
-    }
-
-    public Booking getBooking() {
-        return booking;
     }
 
     public void addBooking(Booking newBooking) {
