@@ -6,13 +6,11 @@ public class BookingManager {
 
     private List<Booking> listOfBookings = new ArrayList<>();
 
-
     public BookingManager(List<Booking> listOfBookings) {
         this.listOfBookings.addAll(listOfBookings);
     }
 
     public BookingManager() {}
-
 
     // Metody přidané z úkolu:
     public List<Booking> getListOfBookings() {
